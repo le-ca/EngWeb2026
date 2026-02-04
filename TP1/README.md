@@ -8,7 +8,7 @@
 * **Nome:** Lourenço Costa Martins
 * **Foto:**
 
-  <img src="Foto.jpg" width="500">
+  ![Foto do Autor](Foto.jpg)
 
 ## Resumo
 Este TPC consiste num script em Python desenvolvido para processar um dataset de reparações de uma oficina automóvel e gerar um website para consulta fácil destes dados.
