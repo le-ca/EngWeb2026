@@ -1,4 +1,4 @@
-# TPC1: Análise de Dataet de Reparações Automóveis
+# TPC1: Análise de Dataset de Reparações Automóveis
 **Data:** 04/02/2026
 **UC** Engenharia Web (2026)
 
