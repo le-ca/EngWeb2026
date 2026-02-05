@@ -1,4 +1,4 @@
-# TPC1: Análise de Dataset de Reparações Automóveis
+# TP1: Análise de Dataset de Reparações Automóveis
 
 **Data:** 04/02/2026
 
