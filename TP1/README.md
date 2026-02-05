@@ -27,4 +27,4 @@ Por fim, o programa gera automaticamente a estrutura de pastas e ficheiros HTML.
 ## Lista de Resultados
 * [tp1.py](tp1.py): Script Python principal que realiza o processamento e geração do site.
 * [dataset_reparacoes.json](dataset_reparacoes.json): Ficheiro de dados utilizado (input).
-* [output](output): Pasta com os ficheiros html, gerados através do script (`tp1.py´). Website para consultar facilmente os dados do dataset.
+* [output](output): Pasta com os ficheiros html, gerados através do script (`tp1.py`). Website para consultar facilmente os dados do dataset.
