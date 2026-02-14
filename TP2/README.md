@@ -19,7 +19,7 @@ Este TPC consiste no desenvolvimento de um servidor aplicacional em **Node.js** 
 
 O sistema é composto por dois serviços principais:
 1. Um **json-server** que serve o dataset de reparações na porta 3000
-2. Um servidor **Node.js** (`server.js`) que corre na porta 7777, consome os dados via **axios** e gera o HTML de resposta.
+2. Um servidor **Node.js** (`tp2.js`) que corre na porta 7777, consome os dados via **axios** e gera o HTML de resposta.
 
 O servidor aplicacional apresenta as seguintes funcionalidades:
 * **Página Principal:** Um menu de navegação que facilita o acesso às diferentes listagens.
@@ -28,5 +28,5 @@ O servidor aplicacional apresenta as seguintes funcionalidades:
 * **Listagem de Viaturas:** Tabela ordenada alfabeticamente por Marca e Modelo, apresentando o número de reparações associadas.
 
 ## Lista de Resultados
-* [tpc2.js](tpc2.js): Código fonte do servidor Node.js que processa os pedidos e gera o HTML.
+* [tp2.js](tp2.js): Código fonte do servidor Node.js que processa os pedidos e gera o HTML.
 * [dataset_reparacoes.json](dataset_reparacoes.json): Dataset utilizado para alimentar o json-server.
