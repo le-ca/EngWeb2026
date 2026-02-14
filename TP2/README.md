@@ -1,4 +1,4 @@
-# TPC2: Servidor de Reparações Automóveis
+# TP2: Servidor de Reparações Automóveis
 
 **Data:** 12/02/2026
 
