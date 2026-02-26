@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h2= exame ? 'Editar Exame' : 'Novo Exame'
+    
+    form.w3-container(method="POST" action= exame ? `/emd/${exame.id}` : "/emd")
+      fieldset
+        legend Dados Pessoais
+        // Se for edição, enviamos o ID escondido
+        if exame
+            input(type="hidden" name="id" value=exame.id)
+        
+        label Data
+        input.w3-input.w3-round(type="date" name="dataEMD" value=exame ? exame.dataEMD : "")
+        
+        label Primeiro Nome
+        input.w3-input.w3-round(type="text" name="nome[primeiro]" value=exame ? exame.nome.primeiro : "")
+        
+        label Último Nome
+        input.w3-input.w3-round(type="text" name="nome[último]" value=exame ? exame.nome.último : "")
+        
+        label Idade
+        input.w3-input.w3-round(type="number" name="idade" value=exame ? exame.idade : "")
+        
+        label Género
+        select.w3-select.w3-round(name="género")
+          option(value="F" selected=(exame && exame.género == 'F')) Feminino
+          option(value="M" selected=(exame && exame.género == 'M')) Masculino
+          
+        label Morada
+        input.w3-input.w3-round(type="text" name="morada" value=exame ? exame.morada : "")
+
+      fieldset
+        legend Dados Desportivos
+        label Modalidade
+        input.w3-input.w3-round(type="text" name="modalidade" value=exame ? exame.modalidade : "")
+        
+        label Clube
+        input.w3-input.w3-round(type="text" name="clube" value=exame ? exame.clube : "")
+        
+        label Email
+        input.w3-input.w3-round(type="email" name="email" value=exame ? exame.email : "")
+        
+        div.w3-padding
+          input.w3-check(type="checkbox" name="federado" checked=(exame && exame.federado))
+          label Federado
+        
+        div.w3-padding
+          input.w3-check(type="checkbox" name="resultado" checked=(exame && exame.resultado))
+          label Apto
+
+      button.w3-btn.w3-purple.w3-margin-top.w3-margin-bottom(type="submit") Gravar
+      
+    footer.w3-container.w3-teal
+      address 
+        a(href="/") Voltar à lista

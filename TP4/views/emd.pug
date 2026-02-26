@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Detalhes do Exame: #{exame.id}
+    
+    .w3-container.w3-margin
+      ul.w3-ul.w3-card-4
+        li #[b Nome:] #{exame.nome.primeiro} #{exame.nome.último}
+        li #[b Data:] #{exame.dataEMD}
+        li #[b Idade:] #{exame.idade}
+        li #[b Género:] #{exame.género}
+        li #[b Morada:] #{exame.morada}
+        li #[b Modalidade:] #{exame.modalidade}
+        li #[b Clube:] #{exame.clube}
+        li #[b Email:] #{exame.email}
+        li #[b Federado:] #{exame.federado ? 'Sim' : 'Não'}
+        li #[b Resultado:] #{exame.resultado ? 'Apto' : 'Não Apto'}
+
+    footer.w3-container.w3-teal.w3-margin-top
+      address 
+        a.w3-button.w3-white.w3-margin(href="/") Voltar

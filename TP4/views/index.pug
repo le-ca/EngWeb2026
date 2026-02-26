@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Lista de Exames Médicos
+    
+    .w3-container.w3-padding-16
+      a.w3-button.w3-blue.w3-margin-right.w3-round(href="/emd?_sort=nome.primeiro&_order=asc") Ordenar por Nome
+      a.w3-button.w3-blue.w3-margin-right.w3-round(href="/emd?_sort=dataEMD&_order=desc") Ordenar por Data
+      a.w3-button.w3-green.w3-margin-right.w3-round(href="/emd/registo") + Adicionar Exame
+      a.w3-button.w3-purple.w3-round(href="/emd/stats") Ver Estatísticas
+
+    .w3-container
+      table.w3-table-all.w3-margin-top
+        tr
+          th Nome
+          th Data
+          th Modalidade
+          th Resultado
+          th Ações
+        each e in list
+          tr
+            td= e.nome.primeiro + ' ' + e.nome.último
+            td= e.dataEMD
+            td= e.modalidade
+            td= e.resultado
+            td
+              a.w3-btn.w3-round.w3-blue-grey.w3-small(href=`/emd/${e.id}`) Ver Mais
+              a.w3-btn.w3-round.w3-yellow.w3-small(href=`/emd/editar/${e.id}`) Editar
+              a.w3-btn.w3-round.w3-red.w3-small(href=`/emd/apagar/${e.id}`) Apagar
+              
