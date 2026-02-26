@@ -24,7 +24,7 @@ block content
             td= e.nome.primeiro + ' ' + e.nome.último
             td= e.dataEMD
             td= e.modalidade
-            td= e.resultado
+            td= e.resultado ? 'Apto' : 'Não Apto'
             td
               a.w3-btn.w3-round.w3-blue-grey.w3-small(href=`/emd/${e.id}`) Ver Mais
               a.w3-btn.w3-round.w3-yellow.w3-small(href=`/emd/editar/${e.id}`) Editar
