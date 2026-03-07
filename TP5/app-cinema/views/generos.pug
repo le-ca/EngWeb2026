@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+  h1 Lista de Géneros
+  table.w3-table-all.w3-margin-top 
+    tr.w3-deep-purple
+      th Género
+      th Nº de Filmes 
+    each g in generos 
+      tr
+        td
+          a(href=`/generos/${g.nome}`)= g.nome
+        td= g.total  

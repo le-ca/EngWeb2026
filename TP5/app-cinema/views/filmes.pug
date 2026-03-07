@@ -1,0 +1,18 @@
+extends layout 
+
+block content 
+  h1 Lista de Filmes 
+  table.w3-table-all.w3-margin-top 
+    tr.w3-teal
+      th ID 
+      th Titulo 
+      th Ano
+      th Nº Géneros 
+      th Nº Atores 
+    each f in filmes 
+      tr.w3-hover-light-blue(onclick=`window.location='/filmes/${f.id}'` style="cursor: pointer;")
+        td= f.id 
+        td= f.title 
+        td= f.year 
+        td= f.genres ? f.genres.length : 0
+        td= f.cast ? f.cast.length : 0    

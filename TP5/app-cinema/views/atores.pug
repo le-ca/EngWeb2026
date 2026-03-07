@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+  h1 Lista de Atores
+  table.w3-table-all.w3-margin-top 
+    tr.w3-indigo
+      th Nome
+      th Nº de Filmes 
+    each a in atores 
+      tr
+        td
+          a(href=`/atores/${a.nome}`)= a.nome
+        td= a.total  
