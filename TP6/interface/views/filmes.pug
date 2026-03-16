@@ -1,0 +1,17 @@
+extends layout
+block content
+  h2 Lista de Filmes
+  table.w3-table-all.w3-hoverable
+    tr.w3-indigo
+      th ID
+      th Título
+      th Ano
+      th Nº Atores
+      th Nº Géneros
+    each f in filmes
+      tr
+        td: a(href=`/filmes/${f._id}`) #{f._id}
+        td= f.title
+        td= f.year
+        td= f.cast.length
+        td= f.genres.length

@@ -1,0 +1,14 @@
+extends layout
+block content
+  div.w3-card-4.w3-margin
+    header.w3-container.w3-indigo
+      h2= ator.nome
+    div.w3-container
+      p #[b ID do Ator:] #{ator._id}
+      p #[b Participou nos seguintes filmes (IDs):] 
+      ul
+        each f in ator.filmes
+          li
+            a(href=`/filmes/${f}`) #{f}
+    footer.w3-container.w3-light-grey.w3-padding
+      a.w3-button.w3-indigo(href='/atores') Voltar
